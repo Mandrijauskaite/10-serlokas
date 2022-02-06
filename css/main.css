@@ -30,9 +30,9 @@ body {
 .container > .left-column {
     display: flex; 
     width: 100%;
-    flex-direction: column; 
     justify-content: center;
-    flex-wrap: wrap; /* norint, kad visi laikai sukristu i stulpeli esant mobiliai variacijai, nes i eile netilps - “wrap-” viskas atbulai */
+    flex-wrap: wrap; /* norint, kad sukristu i stulpeli esant mobiliai variacijai, nes i eile netilps - “wrap-” viskas atbulai */
+    flex-direction: column; 
     align-items: center;  /* vertikalus, kad nesuspaustu */
     /*background-color: red;*/
 }
@@ -40,12 +40,13 @@ body {
 
 .container > .right-column {
     display: flex;
-    width: 600px;  
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
+    width: 100%;  
     justify-content: center;
-   /* background-color: paleturquoise; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; /* vertikalus */
+    text-align: center; 
+    /* background-color: paleturquoise; */
 }
 
 
@@ -57,9 +58,9 @@ body {
 .container > .right-column > .pharagraph-title {
     font-size: 22px; /* titulinio uzraso dydis */
     margin: 0;
-    color: #7b7a81;
     padding-bottom: 30px;
     font-weight: bolder;
+        color: #7b7a81;
     /* background-color: yellow; */
 }
 .container > .right-column > .pharagraph {
@@ -78,3 +79,45 @@ body {
     text-decoration: none;
     padding: 15px 35px 15px 35px;
 }
+
+@media (max-width: 1100px) {
+    .container {
+    width: 800px;
+    margin: 0 calc(50% - 400px);
+    background-color: yellow;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 600px;
+        margin: 0 calc(50% - 300px);
+        background-color: yellowgreen;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 500px;
+        margin: 0 calc(50% - 250px);
+        background-color: violet;
+    }
+}
+
+@media (max-width: 540px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container > .left-column,
+    .container > .right-column {
+        flex-direction: column; /* stulpelis (pagrindine asis eilute arba stulpeliu) */
+        justify-content: center; /* iscentravimas horizontalus. Flexsinimo pav. A Complete Guide to Flexbox | CSS-Tricks - CSS-Tricks */  
+        flex-wrap: wrap; /* norint, kad visi st. sukristu i stulpeli esant mobiliai variacijai, nes i eile netilps - “wrap-” viskas atbulai */
+        align-items: center; /* vertikalus */ 
+        width: 100%;
+        margin: 0;
+        background-color: tomato;
+    }
+}
+
