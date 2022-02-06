@@ -13,12 +13,13 @@ Site published at: https://github.com/Mandrijauskaite/10-serlokas
 
 Design: [Serlokas] (https://raw.githubusercontent.com/Mantachkis/2-serlokas/master/Untitled.png)
 
-## Project features
+## Project features // Projekto procesas
 
-- Github pages
-- responsive design
-- fontawesome icons
-
+- pradinė failų struktūra: index.html, .gitignore, package-lock.json
+- paviešinimas Github Pages
+- README.md sukūrimas
+- img sukūrimas (sukurti failą, sukelti pav. png, img)
+- dizainas (sikurti css su failais base.css ir main.css; flex'inti; kartu dirbti su index.html)
 
 ## Authors
 
