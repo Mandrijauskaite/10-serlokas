@@ -17,7 +17,7 @@ body {
 
 .container {
     display: flex; /* visi DIV sugula i viena eile */
-    flex-direction: row; /* eilute (pagrindine asis eilute arba stulpeliu) */
+    /* flex-direction: row; eilute (pagrindine asis eilute arba stulpeliu) */
     width: 800px; /* per visa ploti */
     padding: 30px 0; /* neleis turiniui liestis prie virsaus ir apacios (bet ne prie sonu) */
     position: absolute;
@@ -57,10 +57,10 @@ body {
 }
 .container > .right-column > .pharagraph-title {
     font-size: 22px; /* titulinio uzraso dydis */
-    margin: 0;
+    margin: 20px;
     padding-bottom: 30px;
     font-weight: bolder;
-        color: #7b7a81;
+    color: #7b7a81;
     /* background-color: yellow; */
 }
 .container > .right-column > .pharagraph {
@@ -106,6 +106,7 @@ body {
 
 @media (max-width: 540px) {
     .container {
+        flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -116,7 +117,7 @@ body {
         flex-wrap: wrap; /* norint, kad visi st. sukristu i stulpeli esant mobiliai variacijai, nes i eile netilps - “wrap-” viskas atbulai */
         align-items: center; /* vertikalus */ 
         width: 100%;
-        margin: 0;
+        margin: 0px;
         background-color: tomato;
     }
 }
